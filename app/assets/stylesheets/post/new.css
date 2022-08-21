@@ -1,0 +1,96 @@
+.post-main {
+  width: 100%;
+  min-width: 800px;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+
+}
+
+.post-form-wrap {
+  width: 50%;
+  height: 900px;
+  background-color: #f0e68c;
+
+}
+
+.post-form-header {
+  width: 100%;
+  height: 100px;
+  text-align: center;
+  font-size: 22px;
+}
+
+.post-form-header-text {
+  line-height: 100px;
+  border-bottom: 1px solid #f5f5f5;
+  font-weight: bold;
+}
+
+.post-form-group {
+  width: 50%;
+  display: flex;
+  flex-direction: column;
+  margin: 0 auto;
+  padding-top: 20px;
+}
+
+
+.post-form-text-wrap {
+  width: 100%;
+  height: 20%;
+}
+
+.form-text {
+  font-size: 14px;
+  font-weight: bold;
+}
+
+.post-indispensable {
+  background: #ea352d;
+  margin-left: 8px;
+  padding: 3px;
+  border-radius: 2px;
+  color: #fff;
+  font-size: 12px;
+  font-weight: bold;
+}
+
+.post-input-default {
+  width: 100%;
+  margin-top: 5px;
+  height: 48px;
+  padding: 10px 16px 8px;
+  border-radius: 10px;
+  border: 1px solid #ccc;
+  background: #fff;
+  font-size: 16px;
+  resize: none;
+}
+
+.post-text-default {
+  width: 100%;
+  margin-top: 5px;
+  padding: 10px 16px 8px;
+  border-radius: 10px;
+  border: 1px solid #ccc;
+  background: #fff;
+  font-size: 16px;
+  resize: none;
+}
+
+.post-btn {
+  width: 40%;
+  margin: 0 auto;
+  margin-top: 50px;
+}
+
+.post-blue-btn {
+  width: 100%;
+  background: #295dbf;
+  border: 1px solid #295dbf;
+  color: #fff;
+  line-height: 48px;
+  font-size: 14px;
+  cursor: pointer;
+}

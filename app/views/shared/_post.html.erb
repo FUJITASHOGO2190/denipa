@@ -1,0 +1,10 @@
+<div class="card">
+  <%= image_tag(post.image, class: :card__img )%>
+  <div class="card__body">
+    <%= link_to post.washing_frequency,  class: :card__title%>
+    <p class="card__summary">
+      <%= post.wearing_years %>
+    </p> 
+    <%= link_to  "@" + post.user.name,  class: :card__user %>
+  </div>
+</div>

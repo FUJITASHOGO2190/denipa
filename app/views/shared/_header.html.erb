@@ -5,7 +5,7 @@
   <div class="navbar">
     <ul class='nav-lists'>
       <li class=nav-lists__list><a href="#">ブランド一覧</a></li>
-      <li class=nav-lists__list><a href="#">投稿する</a></li>
+      <li><%= link_to '投稿する', new_post_path, class: "nav-lists__list" %></li>
       <% if user_signed_in? %>
         <li><%= link_to current_user.name, "/users/#{current_user.id}", class: "nav-lists__list" %> </li>
         <li><%= link_to 'ログアウト', destroy_user_session_path, method: :delete, class: "nav-lists__list" %> </li>

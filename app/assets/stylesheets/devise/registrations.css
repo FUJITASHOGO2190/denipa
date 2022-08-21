@@ -4,9 +4,10 @@
   height: 100%;
   display: flex;
   justify-content: center;
+
 }
 
-/* form-wrapは商品購入画面でも使用しています */
+
 .form-wrap {
   width: 50%;
   background-color: #f0e68c;
@@ -53,7 +54,7 @@
   margin-top: 5px;
   height: 48px;
   padding: 10px 16px 8px;
-  border-radius: 4px;
+  border-radius: 10px;
   border: 1px solid #ccc;
   background: #fff;
   font-size: 16px;
@@ -93,26 +94,14 @@
   resize: none;
 }
 
-.input-birth-wrap {
-  display: flex;
-  flex-wrap: wrap;
-}
-
-.input-birth-wrap select {
-  width: 75px;
-  margin-top: 5px;
-  height: 45px;
-  padding-left: 10px;
-  border-radius: 4px;
-  border: 1px solid #ccc;
-  background: #fff;
+.indispensable {
+  background: #ea352d;
+  margin-left: 8px;
+  padding: 3px;
+  border-radius: 2px;
+  color: #fff;
   font-size: 12px;
-  cursor: pointer;
-}
-
-.input-birth-wrap p {
-  line-height: 60px;
-  padding: 0 5px;
+  font-weight: bold;
 }
 
 .field_with_errors {

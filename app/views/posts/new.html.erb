@@ -1,0 +1,55 @@
+<%= render "shared/header" %>
+
+<%= form_with model: @post, class: 'post-main',  local: true do |f|%>
+<div class='post-form-wrap'>
+        <div class='post-form-header'>
+          <h1 class='post-form-header-text'>
+            投稿する
+          </h1>
+        </div>
+
+        <div class="post-form-group">
+          <div class='post-form-text-wrap'>
+            <label class="post-form-text">ブランド</label>
+            <span class="post-indispensable">必須</span>
+          </div>
+          <%= f.collection_select(:brand_id, Brand.all, :id, :name, {}, {class:"post-input-default", id:"item-category"}) %>
+        </div>
+        
+      <div class="post-form-group">
+        <div class='post-form-text-wrap'>
+          <label class="post-form-text">選択頻度</label>
+          <span class="post-indispensable">必須</span>
+        </div>
+        <%= f.text_field :washing_frequency,class:"post-input-default", id:"prototype_title" %>
+      </div>
+    
+      <div class="post-form-group">
+        <div class='post-form-text-wrap'>
+          <label class="post-form-text">着用年数</label>
+          <span class="post-indispensable">必須</span>
+        </div>
+        <%= f.text_field :wearing_years, class:"post-input-default", id:"prototype_catch_copy" %>
+      </div>
+    
+      <div class="post-form-group">
+        <div class='post-form-text-wrap'>
+          <label class="post-form-text">購入した店、思い入れなど</label>
+          <span class="post-indispensable">必須</span>
+        </div>
+        <%= f.text_area :content, class:"post-text-default", id:"prototype_concept", rows: 10 %>
+      </div>
+    
+      <div class="post-form-group">
+        <div class='post-form-text-wrap'>
+          <label class="post-form-text">写真を選択する</label>
+          <span class="post-indispensable">必須</span>
+        </div>
+        <%= f.file_field :image, id:"prototype_image" %>
+      </div>
+    
+      <div class='post-btn'>
+        <%= f.submit "保存する", class:"post-blue-btn"  %>
+      </div>
+</div>
+<% end %>
