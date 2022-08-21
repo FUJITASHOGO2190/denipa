@@ -1,0 +1,18 @@
+<header class="header">
+  <div class="heading">
+    <h1 class="logo"><a href="#">Denipa</a></h1>
+  </div>
+  <div class="navbar">
+    <ul class='nav-lists'>
+      <li class=nav-lists__list><a href="#">ブランド一覧</a></li>
+      <li class=nav-lists__list><a href="#">投稿する</a></li>
+      <% if user_signed_in? %>
+        <li><%= link_to current_user.name, "/users/#{current_user.id}", class: "nav-lists__list" %> </li>
+        <li><%= link_to 'ログアウト', destroy_user_session_path, method: :delete, class: "nav-lists__list" %> </li>
+      <% else %>  
+        <li><%= link_to 'ログイン', new_user_session_path, class: "nav-lists__list" %></li>
+        <li><%= link_to '新規登録', new_user_registration_path, class: "nav-lists__list" %></li>
+      <% end %>
+      </ul>
+  </div>
+</header>
