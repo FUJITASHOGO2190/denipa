@@ -1,0 +1,19 @@
+.second-header {
+  width: 100%;
+  min-width: 800px;
+  height: 130px;
+  background-color: #295dbf;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+margin-bottom: 40px;
+}
+
+.second-header-logo a{
+  font-size: 60px;
+  color: ivory;
+  font-weight: 600;
+  line-height: 100px; 
+  text-decoration: none;
+}
+
