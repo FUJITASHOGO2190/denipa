@@ -1,40 +1,31 @@
-.greeting{
-  margin-bottom: 20px;
+.index-main{
+  width: 100%;
+  height: 100%;
+  background-color: blanchedalmond;
 }
-.greeting__link{
-  text-decoration: underline;
+
+
+.post-wrapper{
+  margin: 30px;
+  background-color: white;
+  display: inline-block;
+  width: 400px;
+  border: solid;
 }
-.page-heading {
-  font-size: 30px;
-  margin-bottom: 28px;
+
+.post-image{
+  text-align: center;
 }
-.card__wrapper {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: space-between;
-  align-items: center;
-  min-height: calc(100vh - 161px);
+
+.post__img {
+  width: 22vh;
+  height: 22vh;
 }
-.card {
-  width: calc((100% - 50px) / 3);
-  margin-bottom: 40px;
+
+.post-list{
+  padding: 10px;
 }
-.card__img {
-  margin-bottom: 16px;
-}
-.card__title {
-  display: block;
-  font-size: 20px;
-  margin-bottom: 8px;
-  font-weight: bold;
-}
-.card__summary {
-  font-size: 16px;
-}
-.card__user {
-  display: block;
-  font-size: 12px;
-  color: #999;
-  text-align: right;
-  text-decoration: underline;
+
+.post-list-first{
+  margin: 5px 0 5px;
 }
