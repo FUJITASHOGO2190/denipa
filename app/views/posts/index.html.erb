@@ -2,25 +2,25 @@
  
  <%= render "shared/header" %>
   <% @posts.each do |post| %>
-      <div class="post-wrapper">
-        <div class="post-items">
-          <div class="post-image">
+      <div class="index-post-wrapper">
+        <div class="index-post-items">
+          <div class="index-post-image">
             <%= image_tag post.image.variant(resize: '500x500'), class: :post__img %>
           </div>
-          <div class="post-list">
-            <div class="post-list-first">
+          <div class="index-post-list">
+            <div class="index-post-list-first">
               ブランド：
               <%= post.brand.name %> &emsp;
               投稿者：
               <%=  "@" + post.user.name %> 
             </div>
-            <div class="post-list-first">
+            <div class="index-post-list-first">
               選択頻度：
               <%= post.washing_frequency %> &emsp;
               着用年数：
               <%= post.wearing_years %>
             </div>
-            <div class="post-list-first">
+            <div class="index-post-list-first">
               <%= link_to '詳細を見る', post_path(post.id) %> 
             </div>
           </div>

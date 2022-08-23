@@ -5,7 +5,7 @@
 }
 
 
-.post-wrapper{
+.index-post-wrapper{
   margin: 30px;
   background-color: white;
   display: inline-block;
@@ -13,7 +13,7 @@
   border: solid;
 }
 
-.post-image{
+.index-post-image{
   text-align: center;
 }
 
@@ -22,10 +22,10 @@
   height: 22vh;
 }
 
-.post-list{
+.index-post-list{
   padding: 10px;
 }
 
-.post-list-first{
+.index-post-list-first{
   margin: 5px 0 5px;
 }

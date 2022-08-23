@@ -2,55 +2,55 @@
 
 <%= form_with model: @post, class: 'post-main',  local: true do |f|%>
  
-<div class='post-form-wrap'>
-        <div class='post-form-header'>
-          <h1 class='post-form-header-text'>
+<div class='edit-form-wrap'>
+        <div class='edit-form-header'>
+          <h1 class='edit-form-header-text'>
             編集する
           </h1>
         </div>
 
-        <div class="post-form-group">
+        <div class="edit-form-group">
           <div class='post-form-text-wrap'>
-            <label class="post-form-text">ブランド</label>
-            <span class="post-indispensable">必須</span>
+            <label class="edit-form-text">ブランド</label>
+            <span class="edit-indispensable">必須</span>
           </div>
-          <%= f.collection_select(:brand_id, Brand.all, :id, :name, {}, {class:"post-input-default", id:"item-category"}) %>
+          <%= f.collection_select(:brand_id, Brand.all, :id, :name, {}, {class:"edit-input-default"}) %>
         </div>
         
-      <div class="post-form-group">
-        <div class='post-form-text-wrap'>
-          <label class="post-form-text">洗濯頻度</label>
-          <span class="post-indispensable">必須</span>
+      <div class="edit-form-group">
+        <div class='edit-form-text-wrap'>
+          <label class="edit-form-text">洗濯頻度</label>
+          <span class="edit-indispensable">必須</span>
         </div>
-        <%= f.text_field :washing_frequency,class:"post-input-default", id:"prototype_title" %>
+        <%= f.text_field :washing_frequency,class:"edit-input-default" %>
       </div>
     
-      <div class="post-form-group">
-        <div class='post-form-text-wrap'>
-          <label class="post-form-text">着用年数</label>
-          <span class="post-indispensable">必須</span>
+      <div class="edit-form-group">
+        <div class='edit-form-text-wrap'>
+          <label class="edit-form-text">着用年数</label>
+          <span class="edit-indispensable">必須</span>
         </div>
-        <%= f.text_field :wearing_years, class:"post-input-default", id:"prototype_catch_copy" %>
+        <%= f.text_field :wearing_years, class:"edit-input-default" %>
       </div>
     
-      <div class="post-form-group">
-        <div class='post-form-text-wrap'>
-          <label class="post-form-text">購入した店、思い入れなど</label>
-          <span class="post-indispensable">必須</span>
+      <div class="edit-form-group">
+        <div class='edit-form-text-wrap'>
+          <label class="edit-form-text">購入した店、思い入れなど</label>
+          <span class="edit-indispensable">必須</span>
         </div>
-        <%= f.text_area :content, class:"post-text-default", id:"prototype_concept", rows: 10 %>
+        <%= f.text_area :content, class:"edit-text-default",  rows: 10 %>
       </div>
     
-      <div class="post-form-group">
-        <div class='post-form-text-wrap'>
-          <label class="post-form-text">写真を選択する</label>
-          <span class="post-indispensable">必須</span>
+      <div class="edit-form-group">
+        <div class='edit-form-text-wrap'>
+          <label class="edit-form-text">写真を選択する</label>
+          <span class="edit-indispensable">必須</span>
         </div>
-        <%= f.file_field :image, id:"prototype_image" %>
+        <%= f.file_field :image %>
       </div>
     
-      <div class='post-btn'>
-        <%= f.submit "編集する", class:"post-blue-btn"  %>
+      <div class='edit-btn'>
+        <%= f.submit "編集する", class:"edit-blue-btn"  %>
       </div>
 </div>
 <% end %>
