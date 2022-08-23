@@ -1,16 +1,15 @@
-<div class="index-main">
- 
  <%= render "shared/header" %>
+<div class="index-main"> 
   <% @posts.each do |post| %>
       <div class="index-post-wrapper">
         <div class="index-post-items">
           <div class="index-post-image">
-            <%= image_tag post.image.variant(resize: '500x500'), class: :post__img %>
+            <%= image_tag post.image, class: :post__img %>
           </div>
           <div class="index-post-list">
             <div class="index-post-list-first">
               ブランド：
-              <%= post.brand.name %> &emsp;
+              <%= post.brand.name %><br>
               投稿者：
               <%=  "@" + post.user.name %> 
             </div>

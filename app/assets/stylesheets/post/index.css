@@ -1,12 +1,13 @@
 .index-main{
   width: 100%;
   height: 100%;
-  background-color: blanchedalmond;
+  text-align: center;
+  padding-top: 40px;
 }
 
 
 .index-post-wrapper{
-  margin: 30px;
+ margin: 0 30px 30px;
   background-color: white;
   display: inline-block;
   width: 400px;
@@ -18,14 +19,15 @@
 }
 
 .post__img {
-  width: 22vh;
-  height: 22vh;
+  height: 25vh;
 }
 
 .index-post-list{
   padding: 10px;
+  background-color: gainsboro;
 }
 
 .index-post-list-first{
   margin: 5px 0 5px;
+  text-align: left; 
 }

@@ -21,8 +21,9 @@
             <p class="show__title">洗濯頻度：　<%= @post.washing_frequency %></p>
           </div>
         </div>
-      <div class="show__image">
-        <%= image_tag @post.image,  class: :show__image %>
+      <div class="show-image">
+        <%= image_tag @post.image,  class: :show__img %>
+        <%= image_tag @post.image,  class: :show__img %>
       </div>
       <div class="show__detail">
         <p class="show__title">@<%= @post.user.name%>さんのコメント</p>
@@ -32,24 +33,24 @@
       </div>
       <div class="post__show__comments">
         <% if user_signed_in? %>
-        <%= form_with model: [@post, @comment], local: true do |f|%>
-            <div class="field">
+          <%= form_with model: [@post, @comment], local: true do |f|%>
+            <div class="post-field">
               <%= f.label :text, "コメント" %><br />
-              <%= f.text_field :text  %>
+              <%= f.text_area :text, class: :post_text_field %>
             </div>
             <div class="show__comment__actions">
-              <%= f.submit "送信する", class: :form__btn  %>
+              <%= f.submit "コメントを投稿する", class: :comment_form__btn  %>
             </div>
-            <% end %>
-       <% end %>
-      <ul class="show_comments_lists">
-        <% @post.comments.each do |comment| %>
+          <% end %>
+        <% end %>
+         <ul class="show_comments_lists">
+            <% @post.comments.each do |comment| %>
             <li class="show_comments_list">
             <%= comment.text %>
-            <%= link_to comment.user.name, "/users/#{comment.user_id}", class: :comment_user %>
+            &emsp;@<%=  comment.user.name %>
             </li>
             <% end %>
-        </ul>
+         </ul>
       </div>
 </div>
 
