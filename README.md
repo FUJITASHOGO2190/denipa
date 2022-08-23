@@ -72,7 +72,7 @@ https://docs.google.com/spreadsheets/d/1qqgjtw6PW5F_SPIOXYsXFcTtgPvu7XxTYYz52llT
 
 | Column    | Type       | Options                        |
 | ----------| ---------- | ------------------------------ |
-| comment   | text       | null: false                    |
+| text      | text       | null: false                    |
 | user      | references | null: false, foreign_key: true |
 | post      | references | null: false, foreign_key: true |
 
