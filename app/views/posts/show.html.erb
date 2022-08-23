@@ -8,8 +8,8 @@
       <%# プロトタイプの投稿者とログインしているユーザーが同じであれば以下を表示する %>
         <div class="post-show-manage">
           <% if user_signed_in? && current_user.id == @post.user_id %>
-          <%= link_to "投稿を編集する", root_path, class: :prototype__btn %>
-          <%= link_to "投稿を削除する", root_path, class: :prototype__btn %>
+          <%= link_to "投稿を編集する", edit_post_path(@post), class: :prototype__btn %>
+          <%= link_to "投稿を削除する", post_path,  method: :delete, class: :prototype__btn %>
           <% end %>
         </div>
     </div>    
@@ -33,22 +33,26 @@
       </div>
       <div class="prototype__comments">
         <%# ログインしているユーザーには以下のコメント投稿フォームを表示する %>
-          <%# <%= form_with model: モデル名,local: true do |f|%>
+        <% if user_signed_in? %>
+        <%= form_with model: [@post, @comment], local: true do |f|%>
             <div class="field">
-              <%# <%= f.label :hoge, "コメント" %><br />
-              <%# <%= f.text_field :hoge, id:"comment_content" %>
+              <%= f.label :text, "コメント" %><br />
+              <%= f.text_field :text , id:"comment_content" %>
             </div>
             <div class="actions">
-              <%# <%= f.submit "送信する", class: :form__btn  %>
+              <%= f.submit "送信する", class: :form__btn  %>
             </div>
-          <%# <% end %>
-        <%# // ログインしているユーザーには上記を表示する %>
-        <ul class="comments_lists">
-          <%# 投稿に紐づくコメントを一覧する処理を記述する %>
+            <% end %>
+       <% end %>
+      <%# // ログインしているユーザーには上記を表示する %>
+      <ul class="comments_lists">
+        <%# 投稿に紐づくコメントを一覧する処理を記述する %>
+        <% @post.comments.each do |comment| %>
             <li class="comments_list">
-              <%# <%= " コメントのテキスト "%>
-              <%# <%= link_to "（ ユーザー名 ）", root_path, class: :comment_user %>
+            <%= comment.text %>
+            <%= link_to comment.user.name, "/users/#{comment.user_id}", class: :comment_user %>
             </li>
+            <% end %>
           <%# // 投稿に紐づくコメントを一覧する処理を記述する %>
         </ul>
       </div>

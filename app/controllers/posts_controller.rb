@@ -22,6 +22,29 @@ class PostsController < ApplicationController
     @comments = @post.comments.includes(:user)
   end
 
+  def edit
+    @post = Post.find(params[:id])
+    if @post.user_id == current_user.id
+    else
+      redirect_to root_path
+    end
+  end
+ 
+  def update
+    @post = Post.find(params[:id])
+    @post.update(post_params)
+    if @post.valid?
+      redirect_to post_path(post_params)
+    else
+      render 'edit'
+    end
+  end
+
+  def destroy
+    post = Post.find(params[:id])
+    post.destroy
+    redirect_to root_path
+  end
 
   private
   def post_params
