@@ -43,10 +43,10 @@
     
       <div class="edit-form-group">
         <div class='edit-form-text-wrap'>
-          <div id="previews" ></div>
           <label class="edit-form-text">写真を選択する</label>
           <span class="edit-indispensable">必須</span>
         </div>
+        <div id="previews" ></div>
         <div class="click-upload">
           <%= f.file_field :images, name: 'post[images][]', data: {index: 0} %>
         </div>

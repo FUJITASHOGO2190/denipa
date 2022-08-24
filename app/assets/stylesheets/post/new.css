@@ -97,28 +97,41 @@
 
  /* 編集ページでも使用 */
 
+
  #previews{
-  display: flex;
- text-align: center;
+ 
+  background-color: #ea352d;
  }
 
  #previews img{
-  height: 200px;
-  width: 200px;
+  display: block;
+  margin: 20px auto;
+  text-align: center;
+ width: 100%;
   object-fit: contain;
 }
 
 .image-delete-button {
+  margin: 0px auto;
   text-align: center;
   border: solid 1px;
   cursor: pointer;
   width: fit-content;
   background: #ea352d;
-  margin-left: 8px;
   padding: 3px;
-  border-radius: 2px;
   color: #fff;
   font-size: 12px;
   font-weight: bold;
 }
+.img-default{
+ margin-top: 10px;
+}
 
+.post-img-group {
+  width: 50%;
+  display: flex;
+  flex-direction: column;
+  margin: 0 auto;
+  padding-top: 20px;
+  background-color: aqua;
+}

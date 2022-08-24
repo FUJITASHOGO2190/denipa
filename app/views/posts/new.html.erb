@@ -41,15 +41,15 @@
         <%= f.text_area :content, class:"post-text-default", rows: 10 %>
       </div>
     
-      <div class="post-form-group">
+      <div class="post-img-group">
           <div class='post-form-text-wrap'>
             <label class="post-form-text">写真を選択する</label>
             <span class="post-indispensable">必須</span>
           </div>
-          <div class='post-form-images-wrap'> 
+          <div class="post-form-images-wrap"> 
             <div id="previews" ></div>        
               <div class="click-upload">    
-                <%= f.file_field :images, name: 'post[images][]', data: {index: 0} %>
+                <%= f.file_field :images, class:"img-default", name: 'post[images][]', data: {index: 0} %>
               </div>
           </div>    
       </div>
