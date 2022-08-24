@@ -25,7 +25,14 @@
         </div>
     </div>     
       <div class="show-image">
-        <%= image_tag @post.image,  class: :show__img %>
+        <%= image_tag @post.images[0],  class: :show__img %>
+        <div class="other-images">
+          <% @post.images[1..-1].each do |image| %>
+            <div class="other-image">
+              <%= image_tag image, class: :show__img %>
+            </div>
+          <%end%>
+        </div>
       </div>
       <div class="show__detail">
         <p class="show__title">@<%= @post.user.name%>さんのコメント</p>

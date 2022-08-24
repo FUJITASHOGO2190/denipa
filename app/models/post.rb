@@ -8,13 +8,13 @@ class Post < ApplicationRecord
     validates :washing_frequency
     validates :wearing_years
     validates :brand_id
-    validates :image
+    validates :images
   end
 
   validates :brand_id, numericality: { other_than: 0 }
 
   belongs_to :user
-  has_one_attached :image
+  has_many_attached :images
   has_many :comments, dependent: :destroy
 
   belongs_to :brand

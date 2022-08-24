@@ -47,7 +47,9 @@
           <label class="edit-form-text">写真を選択する</label>
           <span class="edit-indispensable">必須</span>
         </div>
-        <%= f.file_field :image %>
+        <div class="click-upload">
+          <%= f.file_field :images, name: 'post[images][]', data: {index: 0} %>
+        </div>
       </div>
     
       <div class='edit-btn'>

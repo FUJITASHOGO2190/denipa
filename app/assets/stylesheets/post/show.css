@@ -26,6 +26,8 @@
   margin: 20px 0;
   border: solid 3px black;
 }
+
+
 .show__detail{
   display: flex;
   align-items: center;

@@ -1,5 +1,6 @@
 <%= render "shared/header" %>
 
+
 <%= form_with model: @post, class: 'post-main', id: 'new_post',  local: true do |f|%>
 <div class='post-form-wrap'>
         <div class='post-form-header'>
@@ -41,14 +42,17 @@
       </div>
     
       <div class="post-form-group">
-        <div class='post-form-text-wrap'>
-          <div id="previews" ></div>
-          <label class="post-form-text">写真を選択する</label>
-          <span class="post-indispensable">必須</span>
-        </div>
-        <%= f.file_field :image  %>
+          <div class='post-form-text-wrap'>
+            <label class="post-form-text">写真を選択する</label>
+            <span class="post-indispensable">必須</span>
+          </div>
+          <div class='post-form-images-wrap'> 
+            <div id="previews" ></div>        
+              <div class="click-upload">    
+                <%= f.file_field :images, name: 'post[images][]', data: {index: 0} %>
+              </div>
+          </div>    
       </div>
-    
       <div class='post-btn'>
         <%= f.submit "保存する", class:"post-blue-btn"  %>
       </div>

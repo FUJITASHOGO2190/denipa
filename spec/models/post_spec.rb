@@ -24,9 +24,9 @@ RSpec.describe Post, type: :model do
           expect(@post.errors.full_messages).to include("User can't be blank")
         end
         it '１枚画像がないと出品できない' do
-          @post.image = nil
+          @post.images = nil
           @post.valid?
-          expect(@post.errors.full_messages).to include("Image can't be blank")
+          expect(@post.errors.full_messages).to include("Images can't be blank")
         end
         it '文章が空欄だと投稿できない' do
           @post.content = nil
