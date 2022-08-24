@@ -94,3 +94,11 @@
   font-size: 14px;
   cursor: pointer;
 }
+
+
+#previews img{
+  height: 100px;
+  width: 100px;
+  object-fit: contain;
+}
+ /* 編集ページでも使用 */
