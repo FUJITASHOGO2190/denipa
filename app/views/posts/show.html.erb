@@ -4,15 +4,14 @@
 
 <div class="post-show-wrapper">
     <div class="show-manage">
-      <p class="post-show-hedding">投稿者：　@<%= @post.user.name%></p>
-      <%# プロトタイプの投稿者とログインしているユーザーが同じであれば以下を表示する %>
+        <div class="post-show-hedding">投稿者：　@<%= @post.user.name%></div>
         <div class="post-show-manage">
           <% if user_signed_in? && current_user.id == @post.user_id %>
           <%= link_to "投稿を編集する", edit_post_path(@post), class: :show__btn %>
           <%= link_to "投稿を削除する", post_path,  method: :delete, class: :show__btn %>
           <% end %>
         </div>
-    </div>    
+       
         <div class="show__body">
           <div class="show__detail">
             <p class="show__title">着用年数：　<%= @post.wearing_years %></p>
@@ -20,7 +19,11 @@
           <div class="show__detail">
             <p class="show__title">洗濯頻度：　<%= @post.washing_frequency %></p>
           </div>
+          <div class="show__detail">
+            <p class="show__title">ブランド：　<%= @post.brand.name %></p>
+          </div>
         </div>
+    </div>     
       <div class="show-image">
         <%= image_tag @post.image,  class: :show__img %>
         <%= image_tag @post.image,  class: :show__img %>
@@ -42,15 +45,18 @@
               <%= f.submit "コメントを投稿する", class: :comment_form__btn  %>
             </div>
           <% end %>
+        <% else %>
+        <div class="login-prompt">コメントを投稿するにはログインして下さい</div> 
         <% end %>
          <ul class="show_comments_lists">
             <% @post.comments.each do |comment| %>
             <li class="show_comments_list">
             <%= comment.text %>
-            &emsp;@<%=  comment.user.name %>
+             by@<%=  comment.user.name %>
             </li>
             <% end %>
          </ul>
       </div>
+      <div class="foot-margin"></div>
 </div>
 
