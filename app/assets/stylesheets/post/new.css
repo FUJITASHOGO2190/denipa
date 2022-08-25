@@ -98,22 +98,17 @@
  /* 編集ページでも使用 */
 
 
- #previews{
- 
-  background-color: #ea352d;
- }
 
  #previews img{
   display: block;
   margin: 20px auto;
   text-align: center;
- width: 100%;
+  width: 100%;
   object-fit: contain;
 }
 
 .image-delete-button {
-  margin: 0px auto;
-  text-align: center;
+  margin: auto;
   border: solid 1px;
   cursor: pointer;
   width: fit-content;
@@ -133,5 +128,4 @@
   flex-direction: column;
   margin: 0 auto;
   padding-top: 20px;
-  background-color: aqua;
 }
