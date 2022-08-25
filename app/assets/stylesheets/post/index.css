@@ -24,10 +24,21 @@
 
 .index-post-list{
   padding: 10px;
-  background-color: gainsboro;
+  background-color: #f0e68c;
 }
 
 .index-post-list-first{
   margin: 5px 0 5px;
   text-align: left; 
+}
+
+.root-show-btn{
+  width: 100%;
+  padding: 2px;
+  background: #295dbf;
+  border: 1px solid #295dbf;
+  color: #fff;
+  cursor: pointer;
+  text-decoration: none;
+  
 }

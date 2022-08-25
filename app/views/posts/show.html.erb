@@ -42,7 +42,9 @@
       </div>
       <div class="post__show__comments">
         <% if user_signed_in? %>
+        <div class="favorite-wrapper">
         <%= render "favorites/favorite" %>
+        </div>
           <%= form_with model: [@post, @comment], local: true do |f|%>
             <div class="post-field">
               <%= f.label :text, "コメント" %><br />
