@@ -1,9 +1,58 @@
-.mypage-name{
+.my-page-name{
   font-size: 30px;
-  margin: 10px auto 0;
+  margin: 20px auto 0;
   padding: 3px;
   text-align: center;
   background-color: #f0e68c;
   width: fit-content;
   border: 3px solid black;
+}
+
+.my-page-main{
+  height: 100%;
+  text-align: center;
+  padding-top: 20px;
+}
+
+.my-page-wrapper{
+  max-width: 1400px;
+  width: fit-content;
+  margin: 0 auto 30px ;
+  background-color: white;
+  border: solid;
+}
+
+
+.my-page-images{
+  display: flex;  
+}
+
+
+.my_post_img {
+  height: 20vh;
+  margin: 5px;
+}
+
+.my-post-list{
+  padding: 10px;
+  background-color: #f0e68c;
+}
+
+.my-post-list-first{
+  margin: 5px 0 5px;
+  text-align: left; 
+}
+
+.my-edit-btn{
+  padding: 2px;
+  background: #295dbf;
+  border: 1px solid #295dbf;
+  color: #fff;
+  cursor: pointer;
+  text-decoration: none;
+}
+
+.my-edit-btn:hover{
+  color: #fff;
+  background: red;
 }

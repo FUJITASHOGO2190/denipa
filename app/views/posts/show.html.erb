@@ -11,19 +11,13 @@
           <%= link_to "投稿を削除する", post_path,  method: :delete, class: :show__btn %>
           <% end %>
         </div>
-       
-        <div class="show__body">
-          <div class="show__detail">
-            <p class="show__title">着用年数：　<%= @post.wearing_years %></p>
-          </div>
-          <div class="show__detail">
-            <p class="show__title">洗濯頻度：　<%= @post.washing_frequency %></p>
-          </div>
-          <div class="show__detail">
-            <p class="show__title">ブランド：　<%= @post.brand.name %></p>
-          </div>
-        </div>
-    </div>     
+          <ul class="show-content-list">
+            <li class="show-contet">着用年数：　<%= @post.wearing_years %></li>
+            <li class="show-contet">洗濯頻度：　<%= @post.washing_frequency %></li>
+            <li class="show-contet">ブランド：　<%= @post.brand.name %></li>
+          </ul>
+    </div>   
+
       <div class="show-image">
         <%= image_tag @post.images[0],  class: :show__img %>
         <div class="other-images">
@@ -35,10 +29,10 @@
         </div>
       </div>
       <div class="show__detail">
-        <p class="show__title">@<%= @post.user.name%>さんのコメント</p>
-        <p class="show__detail__message">
+        <div class="show__title">@<%= @post.user.name%>さんのコメント</div>
+        <div class="show__detail__message">
           <%= @post.content %>
-        </p>
+        </div>
       </div>
       <div class="post__show__comments">
         <% if user_signed_in? %>
@@ -47,7 +41,7 @@
         </div>
           <%= form_with model: [@post, @comment], local: true do |f|%>
             <div class="post-field">
-              <%= f.label :text, "コメント" %><br />
+              <%= f.label :text, "コメント" %>
               <%= f.text_area :text, class: :post_text_field %>
             </div>
             <div class="show__comment__actions">
@@ -55,12 +49,13 @@
             </div>
           <% end %>
         <% else %>
-        <div class="login-prompt">コメントを投稿するにはログインして下さい</div> 
+        <div class="login-prompt">コメント、イイね！するにはログインして下さい</div> 
+        <div class="favorite-wrapper">イイね！<%= @post.favorites.length %></div>
         <% end %>
          <ul class="show_comments_lists">
             <% @post.comments.each do |comment| %>
             <li class="show_comments_list">
-            <%= comment.text %>
+            <%= comment.text %><br>
              by@<%=  comment.user.name %>
             </li>
             <% end %>

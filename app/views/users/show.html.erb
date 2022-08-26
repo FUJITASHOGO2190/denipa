@@ -1,30 +1,30 @@
 <%= render "shared/header" %>
-<div class="mypage-name">
+
+<div class="my-page-name">
   <%=  "@"+ current_user.name %> 
  </div>
-<div class="index-main"> 
+
+<div class="my-page-main"> 
   <% @posts.each do |post| %>
-      <div class="index-post-wrapper">
-        <div class="index-post-items">
-          <div class="index-post-image">
-            <%= image_tag post.images[0], class: :post__img %>
+      <div class="my-page-wrapper">
+          <div class="my-page-images">
+            <% post.images.each do |images| %>
+               <div class="my-post-img">
+              <%= image_tag images, class:"my_post_img"  %>
+              </div>
+            <% end %>
           </div>
-          <div class="index-post-list">
-            <div class="index-post-list-first">
-              ブランド：
-              <%= post.brand.name %>
-            </div>
-            <div class="index-post-list-first">
-              選択頻度：
-              <%= post.washing_frequency %><br>
-              着用年数：
-              <%= post.wearing_years %>
-            </div>
-            <div class="index-post-list-first">
-              <%= link_to '詳細を見る', post_path(post.id), class: "root-show-btn" %> 
-            </div>
-          </div>
-        </div>
+          <ul class="my-post-list">
+              <li class="my-post-list-first">ブランド：<%= post.brand.name %></li>
+              <li class="my-post-list-first">選択頻度：<%= post.washing_frequency %></li>
+              <li class="my-post-list-first">着用年数：<%= post.wearing_years %></li>
+              <li class="my-post-list-first">イイね数：<%= post.favorites.length %></li>
+              <li class="my-post-list-first">コメント：<%= post.content %></li>
+              <div class="my-post-list-first">
+                <%= link_to "投稿を編集する", edit_post_path(post.id), class: "my-edit-btn" %>
+                <%= link_to "投稿を削除する", post_path(post.id),  method: :delete, class: "my-edit-btn" %> 
+              </div>
+          </ul>
       </div>  
   <% end %>
 </div>

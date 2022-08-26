@@ -2,10 +2,10 @@
   - if !Favorite.exists?(user: current_user, post_id: @post.id)   
     = link_to post_favorite_path(@post), method: :post, remote: true, class: "favorite-btn favorite-post", data: {"turbolinks" => false} do
       .i.far.fa-thumbs-up
-        %span いいね！
+        %span イイね！
         = @post.favorites.length   
   - else    
     = link_to post_favorite_path(@post), method: :delete, remote: true, class: "favorite-btn favorite-delete", data: {"turbolinks" => false} do
       .i.far.fa-thumbs-up
-        %span いいね！
+        %span イイね！
         = @post.favorites.length   

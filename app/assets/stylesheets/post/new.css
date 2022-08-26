@@ -95,6 +95,11 @@
   cursor: pointer;
 }
 
+.post-blue-btn:hover{
+  color: #fff;
+  background: green;
+}
+
  /* 編集ページでも使用 */
 
 
