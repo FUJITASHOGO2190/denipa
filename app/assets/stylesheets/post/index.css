@@ -5,6 +5,14 @@
   padding-top: 40px;
 }
 
+.login-usert{
+  font-size: 25px;
+  border: 3px solid #295dbf;
+  width: max-content;
+  text-align: left;
+  margin-top: 10px;
+  margin-left: 30px;
+}
 
 .index-post-wrapper{
  margin: 0 30px 30px;

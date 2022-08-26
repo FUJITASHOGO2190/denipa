@@ -1,10 +1,7 @@
- <%= render "shared/header" %>
-
-  <% if user_signed_in? %>
-  <div class="login-usert">
-   <%=  "@"+ current_user.name %> 
-  </div>
-  <% end %>
+<%= render "shared/header" %>
+<div class="mypage-name">
+  <%=  "@"+ current_user.name %> 
+ </div>
 <div class="index-main"> 
   <% @posts.each do |post| %>
       <div class="index-post-wrapper">
@@ -15,9 +12,7 @@
           <div class="index-post-list">
             <div class="index-post-list-first">
               ブランド：
-              <%= post.brand.name %><br>
-              投稿者：
-              <%=  "@" + post.user.name %> 
+              <%= post.brand.name %>
             </div>
             <div class="index-post-list-first">
               選択頻度：
