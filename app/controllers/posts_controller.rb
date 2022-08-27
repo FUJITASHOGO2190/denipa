@@ -1,6 +1,7 @@
 class PostsController < ApplicationController
   
   before_action :authenticate_user!, only: [:new, :edit, :destroy, :update]
+  before_action :search
 
   def index
     @posts = Post.includes(:user).order('created_at DESC')
@@ -47,6 +48,11 @@ class PostsController < ApplicationController
     post = Post.find(params[:id])
     post.destroy
     redirect_to user_path(current_user.id)
+  end
+
+  def search
+    @q = Post.ransack(params[:q])
+    @items = @q.result.order('created_at DESC')
   end
 
   private
