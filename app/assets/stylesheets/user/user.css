@@ -1,6 +1,8 @@
 .my-page-name{
   font-size: 30px;
-  margin: 20px auto 0;
+  position: absolute;
+  right: 10px;
+  margin: 15px;
   padding: 3px;
   text-align: center;
   background-color: #f0e68c;
@@ -11,11 +13,13 @@
 .my-page-main{
   height: 100%;
   text-align: center;
-  padding-top: 20px;
+  padding-top: 40px;
 }
 
+
+
 .my-page-wrapper{
-  max-width: 1400px;
+  max-width: 1700px;
   width: fit-content;
   margin: 0 auto 30px ;
   background-color: white;
@@ -25,6 +29,8 @@
 
 .my-page-images{
   display: flex;  
+  align-items: center;
+  justify-content: center;
 }
 
 

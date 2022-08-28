@@ -3,7 +3,7 @@
 <div class="my-page-name">
   <%=  "@"+ current_user.name %> 
  </div>
-
+ <div class="index-tittle">マイページ</div>  
 <div class="my-page-main"> 
   <% @posts.each do |post| %>
       <div class="my-page-wrapper">
@@ -14,6 +14,7 @@
               </div>
             <% end %>
           </div>
+
           <ul class="my-post-list">
               <li class="my-post-list-first">ブランド：<%= post.brand.name %></li>
               <li class="my-post-list-first">選択頻度：<%= post.washing_frequency %></li>

@@ -8,17 +8,24 @@
   width: 100%;
   padding: 0 100px 0 30px;
   background-color: #295dbf;
+  position: relative; 
 }
 
 .header a {
+  margin-right: 30px;
   text-decoration: none;
   color: ivory;
 }
 
 .logo {
+  
   font-size: 36px;
   font-weight: 600;
   line-height: 100px; 
+}
+
+.search-field{
+ margin-top: 15px;
 }
 
 .nav-lists {

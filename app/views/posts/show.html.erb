@@ -1,10 +1,15 @@
 <%= render "shared/header" %>
 
-
+<% if user_signed_in? %>
+<div class="login-usert">
+ <%=  "@"+ current_user.name %> 
+</div>
+<% end %>
 
 <div class="post-show-wrapper">
+ 
     <div class="show-manage">
-        <div class="post-show-hedding">投稿者：　@<%= @post.user.name%></div>
+        <div class="post-show-hedding">投稿者：@<%= @post.user.name%></div>
         <div class="post-show-manage">
           <% if user_signed_in? && current_user.id == @post.user_id %>
           <%= link_to "投稿を編集する", edit_post_path(@post), class: :show__btn %>
@@ -12,9 +17,10 @@
           <% end %>
         </div>
           <ul class="show-content-list">
-            <li class="show-contet">着用年数：　<%= @post.wearing_years %></li>
-            <li class="show-contet">洗濯頻度：　<%= @post.washing_frequency %></li>
-            <li class="show-contet">ブランド：　<%= @post.brand.name %></li>
+            <li class="show-contet">投稿日：<%= @post.created_at.strftime('%Y/%m/%d') %></li>
+            <li class="show-contet">ブランド：<%= @post.brand.name %></li>
+            <li class="show-contet">着用年数：<%= @post.wearing_years %></li>
+            <li class="show-contet">洗濯頻度：<%= @post.washing_frequency %></li>
           </ul>
     </div>   
 
