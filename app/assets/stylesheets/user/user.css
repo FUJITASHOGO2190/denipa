@@ -19,7 +19,7 @@
 
 
 .my-page-wrapper{
-  max-width: 1700px;
+  max-width: 1600px;
   width: fit-content;
   margin: 0 auto 30px ;
   background-color: white;
@@ -35,7 +35,7 @@
 
 
 .my_post_img {
-  height: 20vh;
+  height: 15vh;
   margin: 5px;
 }
 
