@@ -28,11 +28,5 @@
               </div>
           </ul>
       </div>  
-      <% post.comments.each do |comment| %>
-            <li class="show_comments_list">
-            <%= comment.text %><br>
-             by@<%=  comment.user.name %>
-            </li>
-            <% end %>
   <% end %>
 </div>

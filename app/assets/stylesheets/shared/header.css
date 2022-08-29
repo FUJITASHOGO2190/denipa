@@ -6,21 +6,30 @@
   display: flex;
   justify-content: space-between;
   width: 100%;
+  height: 100px;
   padding: 0 100px 0 30px;
   background-color: #295dbf;
   position: relative; 
 }
 
+
 .header a {
-  margin-right: 30px;
   text-decoration: none;
   color: ivory;
 }
 
+.header-img{
+  position: absolute;
+  left: 28px;
+  top: 20px;
+  height: 65px;
+}
+
 .logo {
-  
+  position: absolute;
+  left: 90px;
   font-size: 36px;
-  font-weight: 600;
+  font-weight: 700;
   line-height: 100px; 
 }
 
@@ -29,14 +38,15 @@
 }
 
 .nav-lists {
+  position: absolute;
+  right: 30px;
   height: 100px;
   display: flex;
 }
 
 .nav-lists__list {
-  margin-left: 70px;
+  margin-left: 30px;
   font-size: 22px;
-  font-weight: 600;
   line-height: 100px;  
   
 }

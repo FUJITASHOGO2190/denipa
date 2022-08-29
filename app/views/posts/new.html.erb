@@ -11,7 +11,7 @@
         <%= render 'shared/error_messages', model: f.object %>
         <div class="post-form-group">
           <div class='post-form-text-wrap'>
-            <label class="post-form-text">ブランド</label>
+            <label class="post-form-text">ブランドを選択して下さい</label>
             <span class="post-indispensable">必須</span>
           </div>
           <%= f.collection_select(:brand_id, Brand.all, :id, :name, {}, {class:"post-input-default"}) %>
@@ -43,7 +43,7 @@
     
       <div class="post-img-group">
           <div class='post-form-text-wrap'>
-            <label class="post-form-text">写真を選択する</label>
+            <label class="post-form-text">写真を選択して下さい</label>
             <span class="post-indispensable">必須</span>
           </div>
           <div class="post-form-images-wrap"> 
