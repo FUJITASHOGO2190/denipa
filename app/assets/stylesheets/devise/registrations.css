@@ -1,7 +1,7 @@
 .registration-main {
   width: 100%;
   min-width: 800px;
-  height: 100%;
+ 
   display: flex;
   justify-content: center;
 
@@ -11,7 +11,7 @@
 .form-wrap {
   width: 50%;
   background-color: #f0e68c;
-  margin-bottom: 50px;
+  padding-bottom: 50px;
 }
 
 .form-header {
@@ -139,6 +139,11 @@
   line-height: 48px;
   font-size: 14px;
   cursor: pointer;
+}
+
+.register-biue-btn:hover{
+  color: #fff;
+  background: green;
 }
 
 .register-info {

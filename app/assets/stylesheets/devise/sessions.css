@@ -23,6 +23,10 @@
   margin: 10px auto;
 }
 
+.login-blue-btn:hover{
+  color: #fff;
+  background: green;
+}
 
 .login-flash-message {
   text-align: center;

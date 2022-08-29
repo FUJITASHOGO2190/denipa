@@ -20,12 +20,19 @@
               <li class="my-post-list-first">選択頻度：<%= post.washing_frequency %></li>
               <li class="my-post-list-first">着用年数：<%= post.wearing_years %></li>
               <li class="my-post-list-first">イイね数：<%= post.favorites.length %></li>
-              <li class="my-post-list-first">コメント：<%= post.content %></li>
+              <li class="my-post-list-first">コメント数：<%= post.comments.length %></li>
+              <li class="my-post-list-first">投稿コメント：<%= post.content %></li>
               <div class="my-post-list-first">
                 <%= link_to "投稿を編集する", edit_post_path(post.id), class: "my-edit-btn" %>
                 <%= link_to "投稿を削除する", post_path(post.id),  method: :delete, class: "my-edit-btn" %> 
               </div>
           </ul>
       </div>  
+      <% post.comments.each do |comment| %>
+            <li class="show_comments_list">
+            <%= comment.text %><br>
+             by@<%=  comment.user.name %>
+            </li>
+            <% end %>
   <% end %>
 </div>
