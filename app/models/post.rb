@@ -8,10 +8,10 @@ class Post < ApplicationRecord
     validates :washing_frequency
     validates :wearing_years
     validates :brand_id
-    validates :images
+    validates :images, presence: { message: "を選択して下さい" }
   end
 
-  validates :brand_id, numericality: { other_than: 0 }
+  validates :brand_id, numericality: { other_than: 0, message: 'を選択して下さい' }
 
   belongs_to :user
   has_many_attached :images

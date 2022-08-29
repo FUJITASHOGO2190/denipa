@@ -1,0 +1,11 @@
+ja:
+  activerecord:
+    attributes:
+      user:
+        name: ニックネーム
+      post:
+        content: コメント
+        washing_frequency: 洗濯頻度
+        wearing_years: 着用年数
+        images: 写真
+        brand_id: ブランド
