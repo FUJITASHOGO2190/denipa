@@ -11,7 +11,9 @@
       <div class="index-post-wrapper">
         <div class="index-post-items">
           <div class="index-post-image">
-            <%= image_tag post.images[0], class: :post__img %>
+            <% post.images.each do |images| %>
+                <%= image_tag images, class: :post__img %>
+                <% end %>
           </div>
           <ul class="index-post-list">
              <li class="index-post-list-first">投稿日：<%= post.created_at.strftime('%Y/%m/%d') %></li>
