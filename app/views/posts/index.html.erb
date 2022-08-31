@@ -9,10 +9,12 @@
   <div class="blank-index">投稿はありません</div>
   <div class="index-main"> 
    
-        <div class="index-post-wrapper">
+        <div class="blank-post-wrapper">
           <div class="index-post-items">
             <div class="index-post-image">
               <%= image_tag 'index_img.jpeg', class: :blank_index_img %>
+              <%= image_tag 'IMG_1312.jpeg', class: :blank_index_img %>
+              <%= image_tag 'IMG_1313.jpeg', class: :blank_index_img %>
             </div>
             <ul class="index-post-list">
               <li class="blank-text">履き込んだお気に入りのデニムを<br>投稿してシェアしましょう！</li>     
@@ -20,6 +22,7 @@
           </div>
         </div>  
   
+
   </div>
   <% else %>
     <div class="index-tittle">新着投稿</div>  
@@ -28,7 +31,9 @@
           <div class="index-post-wrapper">
             <div class="index-post-items">
               <div class="index-post-image">
-                <%= image_tag post.images[0], class: :post__img %>
+                <% post.images.each do |images| %>
+                <%= image_tag images, class: :post__img %>
+                <% end %>
               </div>
               <ul class="index-post-list">
                 <li class="index-post-list-first">投稿日：<%= post.created_at.strftime('%Y/%m/%d') %></li>

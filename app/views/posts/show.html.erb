@@ -36,9 +36,7 @@
       </div>
       <div class="show__detail">
         <div class="show__title">@<%= @post.user.name%>さんのコメント</div>
-        <div class="show__detail__message">
-          <%= @post.content %>
-        </div>
+        <div class="show__detail__message"><%= @post.content %></div>
       </div>
       <div class="post__show__comments">
         <% if user_signed_in? %>

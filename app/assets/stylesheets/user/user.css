@@ -19,7 +19,7 @@
 
 
 .my-page-wrapper{
-  max-width: 1400px;
+  max-width: 1300px;
   width: fit-content;
   margin: 0 auto 30px ;
   background-color: white;
@@ -30,12 +30,12 @@
 .my-page-images{
   display: flex;  
   align-items: center;
-  justify-content: center;
+  overflow-x: scroll;
 }
 
 
 .my_post_img {
-  height: 15vh;
+  height: 40vh;
   margin: 5px;
   vertical-align:top;
 }
@@ -48,6 +48,10 @@
 .my-post-list-first{
   margin: 5px 0 5px;
   text-align: left; 
+}
+
+.my-post-content{
+  white-space: pre-line;
 }
 
 .my-edit-btn{

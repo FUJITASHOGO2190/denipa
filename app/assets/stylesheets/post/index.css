@@ -16,6 +16,14 @@
   padding: 5px;
 }
 
+.blank-post-wrapper{
+  margin: 0 30px 30px;
+  background-color: white;
+  display: inline-block;
+  width: 700px;
+  border: solid;
+}
+
 .blank-index{
   font-size: 25px;
   background-color: azure;
@@ -50,7 +58,9 @@
 }
 
 .index-post-image{
-  text-align: center;
+  display: flex;  
+  align-items: center;
+  overflow-x: scroll;
 }
 
 .post__img {
