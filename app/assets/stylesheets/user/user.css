@@ -37,6 +37,7 @@
 .my_post_img {
   height: 15vh;
   margin: 5px;
+  vertical-align:top;
 }
 
 .my-post-list{

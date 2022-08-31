@@ -28,6 +28,8 @@
 .blank_index_img{
   text-align: center;
   height: 50vh;
+  vertical-align:top;
+  margin: 5px;
 }
 
 .blank-text{
@@ -53,6 +55,8 @@
 
 .post__img {
   height: 25vh;
+  margin: 5px;
+  vertical-align:top;
 }
 
 .index-post-list{
