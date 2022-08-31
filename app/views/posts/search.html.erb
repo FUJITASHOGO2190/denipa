@@ -5,7 +5,7 @@
  <%=  "@"+ current_user.name %> 
 </div>
 <% end %>
-<div class="search-tittle">検索一覧</div>
+<div class="search-tittle">ブランド検索一覧</div>
 <div class="index-main"> 
   <% @items.each do |post| %>
       <div class="index-post-wrapper">
@@ -23,5 +23,8 @@
           </ul>
         </div>
       </div>  
+  <% end %>
+  <% if @items.blank? then %>
+    <div class="blank-tittle">選択したブランドの投稿はありません</div>
   <% end %>
 </div>

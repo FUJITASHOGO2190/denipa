@@ -62,3 +62,12 @@
   color: #fff;
   background: red;
 }
+
+.blank-post{
+  font-size: 25px;
+  background-color: azure;
+  border: 2px solid black;
+  margin: 0 auto;
+  padding: 3px;
+  width: fit-content;
+}

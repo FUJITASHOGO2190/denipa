@@ -29,4 +29,7 @@
           </ul>
       </div>  
   <% end %>
+  <% if @posts.blank? then %>
+  <div class="blank-post">投稿はありません</div>
+  <% end %>
 </div>

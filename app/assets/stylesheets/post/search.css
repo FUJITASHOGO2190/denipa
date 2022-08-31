@@ -3,3 +3,12 @@
   font-size: 30px;
   padding-top: 10px;
 }
+
+.blank-tittle{
+  font-size: 25px;
+  background-color: azure;
+  border: 2px solid black;
+  margin: 0 auto;
+  padding: 3px;
+  width: fit-content;
+}
