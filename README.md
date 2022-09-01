@@ -133,10 +133,10 @@ https://docs.google.com/spreadsheets/d/1qqgjtw6PW5F_SPIOXYsXFcTtgPvu7XxTYYz52llT
 
 
 # ローカルでの動作方法
-以下のコマンドを順に実行
-% git clone https://github.com/FUJITASHOGO2190/denipa.git
-% cd denipa
-% bundle install
-% yarn install
-% rails db:create
+以下のコマンドを順に実行  
+% git clone https://github.com/FUJITASHOGO2190/denipa.git  
+% cd denipa  
+% bundle install  
+% yarn install  
+% rails db:create  
 % rails db:migrate
