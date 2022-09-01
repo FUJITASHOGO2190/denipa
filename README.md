@@ -21,16 +21,43 @@ https://denipa.herokuapp.com/
 
 # アプリケーションを作成した背景
 - 前職でデニムが主力なお店で販売員として働いていた時によくお客様に「このブランドのデニムはどんな風に  
-色落ちするの？」「洗濯方法は？」「イイ色にさせるコツは？」等の質問をよく聞かれましたが特に色落ちについての  
-質問が多かったです。お客様がデニムの購入を検討している際にシルエットや金額で選ぶのはもちろんですが色落ちでも  
-選ぶのだなと感じていました。  
-そんなお客様の疑問を一気に解決でき、さらにSNS感覚でデニムが好きな方同士でコミュニケーションが取れるよう  
-アプリケーションを開発することにしました。
+色落ちするの？」「洗濯方法は？」「イイ色にさせるコツは？」等の質問をよく聞かれましたが特に色落ちについての質問が多かったです。お客様がデニムの購入を検討している際にシルエットや金額で選ぶのはもちろんですが色落ちでも選ぶのだなと感じていました。  
+そんなお客様の疑問を一気に解決でき、さらにSNS感覚でデニムが好きな方同士でコミュニケーションが取れるようアプリケーションを開発することにしました。
 
 
 
 # 洗い出した要件
 https://docs.google.com/spreadsheets/d/1qqgjtw6PW5F_SPIOXYsXFcTtgPvu7XxTYYz52llTaQ8/edit#gid=982722306
+
+
+
+# 実装機能
+## トップページ
+### 投稿がない場合
+[![Image from Gyazo](https://i.gyazo.com/4eaeb71a15812d6685884662d9416cce.gif)](https://gyazo.com/4eaeb71a15812d6685884662d9416cce)
+
+
+### 投稿がある場合
+[![Image from Gyazo](https://i.gyazo.com/065222216301c67623f828838d328ad9.gif)](https://gyazo.com/065222216301c67623f828838d328ad9)
+
+
+## ユーザー登録機能
+- ユーザー登録することで投稿、お気に入り、コメントを送る、マイページのログインが出来るようになります。(ユーザー登録しなくても投稿の閲覧は可能です。)
+[![Image from Gyazo](https://i.gyazo.com/baf46e166c6271dbbc85ec6f5e37e969.gif)](https://gyazo.com/baf46e166c6271dbbc85ec6f5e37e969)
+
+
+## 投稿機能
+- デニムのブランドをプルダウンから選択し着用年数、洗濯頻度、コメントを記入します。画像は５枚まで投稿出来ます。
+[![Image from Gyazo](https://i.gyazo.com/a4caa269578c3047d45c8f598f96586e.gif)](https://gyazo.com/a4caa269578c3047d45c8f598f96586e)
+
+## コメント、お気に入り機能
+- ログインしている状態なら詳細ページから投稿に対して、コメント、お気に入りが出来ます。（コメント数、お気にり数はマイページにて確認出来ます。）
+[![Image from Gyazo](https://i.gyazo.com/433b31927879825b381b0fc4013f91f5.gif)](https://gyazo.com/433b31927879825b381b0fc4013f91f5)
+
+
+## 編集、削除機能
+- マイページか詳細ページにて編集、削除可能。編集する際はユーザーの手間を省くために投稿時の情報は保持されています。
+[![Image from Gyazo](https://i.gyazo.com/c0adff9a10e7c0eeed2116d85a862be3.gif)](https://gyazo.com/c0adff9a10e7c0eeed2116d85a862be3)
 
 
 
@@ -94,10 +121,22 @@ https://docs.google.com/spreadsheets/d/1qqgjtw6PW5F_SPIOXYsXFcTtgPvu7XxTYYz52llT
 
 
 # 画面遷移図
-
 [![Image from Gyazo](https://i.gyazo.com/a64ecc8de412c925e9c0b68640ad7e9d.png)](https://gyazo.com/a64ecc8de412c925e9c0b68640ad7e9d)
+
 
 # 開発環境
 - Ruby
 - Rails
 - MySQL
+- Javascript
+- jQuery
+
+
+# ローカルでの動作方法
+以下のコマンドを順に実行
+% git clone https://github.com/FUJITASHOGO2190/denipa.git
+% cd denipa
+% bundle install
+% yarn install
+% rails db:create
+% rails db:migrate
