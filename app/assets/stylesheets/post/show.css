@@ -97,6 +97,28 @@
   background: red;
 }
 
+.post_delete_btn{
+  padding: 2px;
+  font-size: 12px;
+  background: grey;
+  border: 1px solid black;
+  color: #fff;
+  text-decoration: none;
+  user-select: none;
+  border-radius: 3px;
+  transition: 0.4s ease;
+  margin:  4px;
+  -webkit-transition: all 0.3s ease;
+  -moz-transition: all 0.3s ease;
+  -o-transition: all 0.3s ease;
+  transition: all  0.3s ease;
+}
+
+.post_delete_btn:hover{
+  color: #fff;
+  background: red;
+}
+
 .post__show__comments{
   background-color: #f0e68c;
   border: 3px solid black;
