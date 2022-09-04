@@ -61,9 +61,33 @@
   color: #fff;
   cursor: pointer;
   text-decoration: none;
+  border-radius: 3px;
+  -webkit-transition: all 0.3s ease;
+    -moz-transition: all 0.3s ease;
+    -o-transition: all 0.3s ease;
+    transition: all  0.3s ease;
 }
 
 .my-edit-btn:hover{
+  color: #fff;
+  background: green;
+}
+
+.my-delete-btn{
+  padding: 2px;
+  background: #295dbf;
+  border: 1px solid #295dbf;
+  color: #fff;
+  cursor: pointer;
+  text-decoration: none;
+  border-radius: 3px;
+  -webkit-transition: all 0.3s ease;
+    -moz-transition: all 0.3s ease;
+    -o-transition: all 0.3s ease;
+    transition: all  0.3s ease;
+}
+
+.my-delete-btn:hover{
   color: #fff;
   background: red;
 }
