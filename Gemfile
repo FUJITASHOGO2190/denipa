@@ -71,3 +71,5 @@ gem "haml-rails"
 gem 'ransack'
 
 gem 'rails-i18n'
+
+gem 'jquery-rails'
