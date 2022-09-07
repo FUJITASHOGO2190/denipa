@@ -51,7 +51,7 @@ https://docs.google.com/spreadsheets/d/1qqgjtw6PW5F_SPIOXYsXFcTtgPvu7XxTYYz52llT
 
 ## コメント、お気に入り機能
 - ログインしている状態なら詳細ページから投稿に対して、コメント、お気に入りが出来ます。（コメント数、お気にり数はマイページにて確認出来ます。）
-[![Image from Gyazo](https://i.gyazo.com/433b31927879825b381b0fc4013f91f5.gif)](https://gyazo.com/433b31927879825b381b0fc4013f91f5)
+[![Image from Gyazo](https://i.gyazo.com/7df4d358460964bcb9d1f6c50c86ff68.gif)](https://gyazo.com/7df4d358460964bcb9d1f6c50c86ff68)
 
 
 ## 編集、削除機能
