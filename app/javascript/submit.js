@@ -3,7 +3,7 @@ window.addEventListener('DOMContentLoaded', function(){
   
   $('#q_brand_id_eq').on('change', function(){
       
-      const selected = $('#q_category_id_eq').val();
+      const selected = $('#q_brand_id_eq').val();
       if( selected !== '' ){
           $('#submit-btn').prop('disabled', false);
       } else {
