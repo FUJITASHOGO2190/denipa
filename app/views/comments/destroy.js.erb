@@ -1,0 +1,4 @@
+$(function() {
+$('#comment_<%= @comment.id %>').remove();
+$('.show_comments_lists').html("<%= j(render 'comments/comments', post: @post, comment: @comment) %>");
+});

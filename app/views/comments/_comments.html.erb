@@ -1,9 +1,9 @@
 <% post.comments.each do |comment| %>
-  <li class="show_comments_list">
+  <li id="comment_<% @comment.id %>" class="show_comments_list">
      <%= comment.text %><br>
      by@<%=  comment.user.name %>
       <% if user_signed_in? && current_user.id == comment.user_id  %>
-       <%= link_to "コメントを削除する", post_comment_path(comment.post, comment),  method: :delete, class: :post_delete_btn, data: {confirm: "削除しますか？"} %>
+       <%= link_to "コメントを削除する", post_comment_path(comment.post, comment),  method: :delete, remote: true, class: :post_delete_btn %>
        <% end %>   
   </li>
 <% end %>
