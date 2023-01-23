@@ -112,8 +112,7 @@ https://docs.google.com/spreadsheets/d/1qqgjtw6PW5F_SPIOXYsXFcTtgPvu7XxTYYz52llT
 
 
 # 画面遷移図
-[![Image from Gyazo](https://i.gyazo.com/a64ecc8de412c925e9c0b68640ad7e9d.png)](https://gyazo.com/a64ecc8de412c925e9c0b68640ad7e9d)
-
+[![Image from Gyazo](https://i.gyazo.com/165e6b470682debfa111ebc5630db08c.png)](https://gyazo.com/165e6b470682debfa111ebc5630db08c)
 
 # 開発環境
 - Ruby
@@ -121,6 +120,7 @@ https://docs.google.com/spreadsheets/d/1qqgjtw6PW5F_SPIOXYsXFcTtgPvu7XxTYYz52llT
 - MySQL
 - Javascript
 - jQuery
+- GitHub
 
 
 # ローカルでの動作方法
