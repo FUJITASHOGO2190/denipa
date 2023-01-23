@@ -73,3 +73,7 @@ gem 'ransack'
 gem 'rails-i18n'
 
 gem 'jquery-rails'
+
+group :production do
+  gem 'pg'
+end
